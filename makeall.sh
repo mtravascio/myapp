@@ -3,8 +3,8 @@
 #bin for the script
 #pyinstaller --onefile --noconsole main.py
 
-#flatpak install flathub org.kde.Sdk//6.7
-#flatpak install flathub org.kde.Platform//6.7
+#flatpak install flathub org.kde.Sdk//6.8
+#flatpak install flathub org.kde.Platform//6.8
 #flatpak-builder --user --install --force-clean build-dir flatpak/org.example.MyApp.json
 #flatpak-builder  --repo=repo --force-clean --install-deps-from flathub  build-dir flatpak/org.example.MyApp.json
 

@@ -8,3 +8,7 @@ __pycache__/
 *.pyd
 .env
 .venv
+build/
+build-dir/
+.flatpak-builder/
+repo/
