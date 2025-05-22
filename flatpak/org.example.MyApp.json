@@ -1,0 +1,40 @@
+{
+  "app-id": "org.example.MyApp",
+  "runtime": "org.kde.Platform",
+  "runtime-version": "6.8",
+  "sdk": "org.kde.Sdk",
+  "base": "io.qt.PySide.BaseApp",
+  "base-version": "6.8",
+  "command": "myapp",
+  "finish-args": [
+    "--share=network",
+    "--socket=wayland",
+    "--socket=fallback-x11"
+  ],
+  "modules": [
+    {
+      "name": "myapp",
+      "buildsystem": "simple",
+      "build-commands": [
+        "echo 'Starting build process...'",
+        "pip3 install --no-build-isolation --prefix=/app .",
+        "echo 'Installation complete.'",
+        "install -Dm755 main.py /app/bin/myapp" 
+      ],
+      "sources": [
+        {
+          "type": "file",
+          "path": "../main.py"
+        },
+               {
+          "type": "file",
+          "path": "../setup.py" 
+        },
+        {
+          "type": "file",
+          "path": "../requirements.txt"
+        }
+      ]
+    }
+  ]
+}

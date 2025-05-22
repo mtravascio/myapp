@@ -1,0 +1,9 @@
+# Ignora l'ambiente virtuale Python
+venv/
+
+# Altri file temporanei o specifici
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
