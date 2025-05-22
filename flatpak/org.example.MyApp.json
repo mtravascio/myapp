@@ -9,7 +9,8 @@
   "finish-args": [
     "--share=network",
     "--socket=wayland",
-    "--socket=fallback-x11"
+    "--socket=fallback-x11",
+    "--talk-name=org.freedesktop.DBus"
   ],
   "modules": [
     {
@@ -17,7 +18,7 @@
       "buildsystem": "simple",
       "build-commands": [
         "echo 'Starting build process...'",
-        "pip3 install --no-build-isolation --prefix=/app .",
+        "pip3 install --no-build-isolation --no-cache-dir --prefix=/app .",
         "echo 'Installation complete.'",
         "install -Dm755 main.py /app/bin/myapp" 
       ],
